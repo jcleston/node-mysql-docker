@@ -8,3 +8,12 @@ services:
       - MYSQL_DATABASE=app_node
     ports: 
       - 3307:3306
+
+  app:
+    build: .
+    depends_on:
+      - mysqldb
+    links:
+      - mysqldb
+    ports:
+      - 3000:3000
