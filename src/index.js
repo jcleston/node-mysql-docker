@@ -7,7 +7,7 @@ const pool = createPool({
     host: 'mysqldb',
     user: 'root',
     password: '123456',
-    port: 3307
+    port: 3306
 })
 
 app.get('/', (req, res) => {
